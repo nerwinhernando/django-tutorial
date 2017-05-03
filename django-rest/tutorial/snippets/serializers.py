@@ -9,7 +9,7 @@ class SnippetSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Snippet
-        fields = ('url', 'id', 'highlight', 'owner',
+        fields = ('url','highlight', 'owner',
                   'title', 'code', 'linenos', 'language', 'style')
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
@@ -17,4 +17,4 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = User
-        fields = ('url', 'id', 'username', 'snippets')
+        fields = ('url', 'username', 'snippets')
