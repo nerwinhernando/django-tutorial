@@ -34,3 +34,7 @@ urlpatterns = [
 
 
 urlpatterns += [url(r'^schema/$', schema_view), ]
+
+urlpatterns += [
+    url(r'^', include('serializerrelations.urls')),
+]
