@@ -7,3 +7,10 @@ class AlbumSerializer(serializers.ModelSerializer):
     class Meta:
         model = Album
         fields = ('album_name', 'artist', 'tracks')
+
+class AlbumPkrSerializer(serializers.ModelSerializer):
+    tracks = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
+
+    class Meta:
+        model = Album
+        fields = ('album_name', 'artist', 'tracks')
